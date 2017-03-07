@@ -18,27 +18,14 @@ class ViewController: UIViewController {
     var isRecording = false
     var movieOutput:MovieOutput? = nil
     var mvUrl:URL?
-    var filterOperation: FilterOperationInterface?
+    let filter = StretchDistortion()
 
     override func viewDidLoad() {
         super.viewDidLoad()
         do {
             camera = try Camera(sessionPreset:AVCaptureSessionPreset640x480)
             camera.runBenchmark = true
-            let filterInList = filterOperations[0]
-            self.filterOperation = filterInList
-            if let currentFilterConfiguration = self.filterOperation {
-                // Configure the filter chain, ending with the view
-                if let view = self.renderView {
-                    switch currentFilterConfiguration.filterOperationType {
-                    case .singleInput:
-                        camera.addTarget(currentFilterConfiguration.filter)
-                        currentFilterConfiguration.filter.addTarget(view)
-                    default :
-                        break
-                    }
-                }
-            }
+            camera --> filter --> renderView
             camera.startCapture()
 
         } catch {
@@ -65,7 +52,7 @@ class ViewController: UIViewController {
                 
                 movieOutput = try MovieOutput(URL:fileURL, size:Size(width:480, height:640), liveVideo:true)
                 camera.audioEncodingTarget = movieOutput
-                filterOperation!.filter --> movieOutput!
+                filter --> movieOutput!
                 movieOutput!.startRecording()
                 DispatchQueue.main.async {
                     (sender as! UIButton).titleLabel!.text = "Stop"

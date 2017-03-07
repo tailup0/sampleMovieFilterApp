@@ -14,8 +14,6 @@
 		7AB48BE91E6E6DD400014E95 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7AB48BE71E6E6DD400014E95 /* LaunchScreen.storyboard */; };
 		7AB48C011E6E720600014E95 /* GPUImage.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7AB48BFE1E6E714500014E95 /* GPUImage.framework */; };
 		7AB48C431E6E9A7600014E95 /* GPUImage.framework in CopyFiles */ = {isa = PBXBuildFile; fileRef = 7AB48BFE1E6E714500014E95 /* GPUImage.framework */; settings = {ATTRIBUTES = (CodeSignOnCopy, RemoveHeadersOnCopy, ); }; };
-		7AB48C471E6E9C2300014E95 /* FilterOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB48C451E6E9C2300014E95 /* FilterOperations.swift */; };
-		7AB48C481E6E9C2300014E95 /* FilterOperationTypes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7AB48C461E6E9C2300014E95 /* FilterOperationTypes.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,8 +69,6 @@
 		7AB48BE81E6E6DD400014E95 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7AB48BEA1E6E6DD400014E95 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		7AB48BF21E6E714400014E95 /* GPUImage.xcodeproj */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.pb-project"; name = GPUImage.xcodeproj; path = framework/GPUImage.xcodeproj; sourceTree = SOURCE_ROOT; };
-		7AB48C451E6E9C2300014E95 /* FilterOperations.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOperations.swift; sourceTree = "<group>"; };
-		7AB48C461E6E9C2300014E95 /* FilterOperationTypes.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FilterOperationTypes.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,8 +105,6 @@
 				7AB48BF21E6E714400014E95 /* GPUImage.xcodeproj */,
 				7AB48BDE1E6E6DD400014E95 /* AppDelegate.swift */,
 				7AB48BE01E6E6DD400014E95 /* ViewController.swift */,
-				7AB48C451E6E9C2300014E95 /* FilterOperations.swift */,
-				7AB48C461E6E9C2300014E95 /* FilterOperationTypes.swift */,
 				7AB48BE21E6E6DD400014E95 /* Main.storyboard */,
 				7AB48BE51E6E6DD400014E95 /* Assets.xcassets */,
 				7AB48BE71E6E6DD400014E95 /* LaunchScreen.storyboard */,
@@ -241,8 +235,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7AB48C471E6E9C2300014E95 /* FilterOperations.swift in Sources */,
-				7AB48C481E6E9C2300014E95 /* FilterOperationTypes.swift in Sources */,
 				7AB48BE11E6E6DD400014E95 /* ViewController.swift in Sources */,
 				7AB48BDF1E6E6DD400014E95 /* AppDelegate.swift in Sources */,
 			);
